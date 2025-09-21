@@ -19,8 +19,8 @@ class Prices(commands.Cog):
             name="prices", description="Prices commands"
         )
 
-        # for cmd in cmds:
-            # self.prices_group.add_command(cmd)  # noqa: E116
+        for cmd in cmds:
+            self.prices_group.add_command(cmd)  # noqa: E116
 
     async def cog_load(self):
         self.bot.tree.add_command(self.prices_group)
