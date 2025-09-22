@@ -1,3 +1,4 @@
+from discord.ext import commands
 import global_vars as gv
 import sys
 
@@ -25,13 +26,16 @@ async def setup_bot():
         print(f"Failed to sync command tree: {e}")
 
 
-def main():
-    @gv.bot.event
-    async def on_ready():
-        print(f"Logged in as {gv.bot.user}")
+class BudgetiersBot(commands.Bot):
+    async def setup_hook(self):
+        print(f"Logged in as {self.user}")
         await setup_bot()
 
-    gv.bot.run(gv.token)
+
+def main():
+    bot = gv.bot
+    bot.__class__ = BudgetiersBot
+    bot.run(gv.token)
 
 
 if __name__ == "__main__":
