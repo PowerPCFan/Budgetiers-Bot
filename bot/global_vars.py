@@ -14,4 +14,4 @@ def default() -> Intents:
     return intents
 
 
-bot = commands.Bot(command_prefix="b!", intents=default())
+bot = commands.Bot(command_prefix="b!", intents=default(), help_command=None)

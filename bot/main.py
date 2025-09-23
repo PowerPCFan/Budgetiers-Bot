@@ -5,7 +5,8 @@ import sys
 
 async def setup_bot():
     extensions = [
-        "commands.prices"
+        "commands.prices",
+        "commands.help",
     ]
 
     for extension in extensions:
@@ -26,7 +27,7 @@ async def setup_bot():
         print(f"Failed to sync command tree: {e}")
 
 
-class BudgetiersBot(commands.Bot):
+class PCPartsBot(commands.Bot):
     async def setup_hook(self):
         print(f"Logged in as {self.user}")
         await setup_bot()
@@ -34,7 +35,7 @@ class BudgetiersBot(commands.Bot):
 
 def main():
     bot = gv.bot
-    bot.__class__ = BudgetiersBot
+    bot.__class__ = PCPartsBot
     bot.run(gv.token)
 
 
