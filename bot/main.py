@@ -7,6 +7,8 @@ async def setup_bot():
     extensions = [
         "commands.prices",
         "commands.help",
+        "commands.pc_resource_document",
+        "commands.reload_command"
     ]
 
     for extension in extensions:

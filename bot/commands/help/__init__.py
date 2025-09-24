@@ -32,8 +32,7 @@ class Help(commands.Cog):
         await interaction.response.send_message(embed=embed)
 
     async def cog_load(self):
-        # self.bot.tree.add_command(self.help)
-        print("Help command added to tree")
+        print("/help command added to tree")
 
 
 async def setup(bot: commands.Bot) -> None:

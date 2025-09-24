@@ -258,8 +258,8 @@ class Prices(commands.Cog):
             embed.add_field(
                 name="PSU Tierlists",
                 value=textwrap.dedent("""\
-                    [SPL Tierlist](https://docs.google.com/spreadsheets/d/1akCHL7Vhzk_EhrpIGkz8zTEvYfLDcaSpZRB6Xt6JWkc/edit?pli=1&gid=1973454078#gid=1973454078)
-                    [Cultists Tierlist](https://docs.google.com/spreadsheets/d/1eL0893Ramlwk6E3s3uSvH1_juom7SMG5SCNzP2Uov8w/edit?gid=1529225916#gid=1529225916)
+                    [SPL Tierlist](https://docs.google.com/spreadsheets/d/1akCHL7Vhzk_EhrpIGkz8zTEvYfLDcaSpZRB6Xt6JWkc/edit?pli=1&gid=931697732#gid=931697732)
+                    [Cultists Tierlist](https://docs.google.com/spreadsheets/d/1eL0893Ramlwk6E3s3uSvH1_juom7SMG5SCNzP2Uov8w/edit?gid=1529225916#gid=1529225916) ([Alternate Link](https://cultists.network/140/psu-tier-list/))
                 """),  # noqa: E501
                 inline=False
             )
@@ -270,7 +270,7 @@ class Prices(commands.Cog):
 
     async def cog_load(self):
         self.bot.tree.add_command(self.prices_group)
-        print("Prices commands added to tree")
+        print("/prices command group added to tree")
 
 
 async def setup(bot: commands.Bot) -> None:
